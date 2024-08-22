@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxlf8x6066qpm"]
+
+[ext_resource type="Script" path="res://scene/entry/entry.gd" id="1_heodq"]
+
+[node name="Entry" type="CanvasLayer"]
+
+[node name="panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_heodq")
+
+[node name="ColorRect" type="ColorRect" parent="panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.92803, 0.962416, 0.725952, 1)
+
+[node name="Label" type="Label" parent="panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.637455, 0.637455, 0.637455, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_font_sizes/font_size = 150
+text = "推箱子"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="panel"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="start" type="Button" parent="panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "开 始"
+
+[node name="exit" type="Button" parent="panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "退 出"
+
+[connection signal="pressed" from="panel/VBoxContainer/start" to="panel" method="_on_start_pressed"]
+[connection signal="pressed" from="panel/VBoxContainer/exit" to="panel" method="_on_exit_pressed"]

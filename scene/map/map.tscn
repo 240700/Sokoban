@@ -1,0 +1,80 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckttq4xwvdty"]
+
+[ext_resource type="Script" path="res://scene/map/map.gd" id="1_0hq08"]
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_0hq08")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.894438, 0.791071, 0.946178, 1)
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -115.0
+offset_right = 310.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 5
+
+[node name="Button" type="Button" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "1"
+
+[node name="Button2" type="Button" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "2"
+
+[node name="Button3" type="Button" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "3"
+
+[node name="Button4" type="Button" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "4"
+
+[node name="Button5" type="Button" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "5"
+
+[node name="Button6" type="Button" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "6"
+
+[node name="Button7" type="Button" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "7"
+
+[node name="Button8" type="Button" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "8"

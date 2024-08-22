@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://brw4gii2o2c5q"]
+
+[ext_resource type="Script" path="res://script/controller.gd" id="1_7wcmv"]
+[ext_resource type="Script" path="res://scene/main.gd" id="1_er1sb"]
+[ext_resource type="PackedScene" uid="uid://w3ih2gt4p5w7" path="res://scene/arena/arena.tscn" id="3_6ahm5"]
+[ext_resource type="PackedScene" uid="uid://dilk85tmj2a84" path="res://scene/player/player.tscn" id="3_gr54w"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_er1sb")
+
+[node name="Controller" type="Node" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("1_7wcmv")
+player = NodePath("../Player")
+
+[node name="Arena" parent="." instance=ExtResource("3_6ahm5")]
+
+[node name="Player" parent="." instance=ExtResource("3_gr54w")]
+position = Vector2(515, 436)

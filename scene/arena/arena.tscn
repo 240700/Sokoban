@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://w3ih2gt4p5w7"]
+
+[ext_resource type="TileSet" uid="uid://dgwe6c4cscjpk" path="res://resource/tileset.tres" id="1_5sji2"]
+[ext_resource type="Script" path="res://scene/arena/arena.gd" id="1_7k14f"]
+
+[node name="Arena" type="Node2D"]
+script = ExtResource("1_7k14f")
+
+[node name="Ground" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_5sji2")
+
+[node name="Block" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_5sji2")
+
+[node name="Crate" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_5sji2")
+
+[node name="Env" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_5sji2")

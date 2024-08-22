@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckwlft8umufu6"]
+
+[ext_resource type="Script" path="res://scene/check_point/check_point.gd" id="1_p3fyp"]
+[ext_resource type="Texture2D" uid="uid://by2m3ng0uqnfe" path="res://asset/image/Environment/environment_05.png" id="2_n2fxn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yc7g"]
+
+[node name="CheckPoint" type="Node2D" groups=["check_point"]]
+script = ExtResource("1_p3fyp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_n2fxn")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_0yc7g")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
